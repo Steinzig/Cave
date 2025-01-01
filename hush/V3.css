@@ -18,7 +18,6 @@ body{
 ul{
     display: flex;
     list-style-type: none;
-    background-color: #5ac800;
     padding: 0;
 }
 li{ 
@@ -54,4 +53,7 @@ img.spike{
 a{
     text-decoration: none;
     color: white;
+}
+li:hover{
+    background-color: #398000;
 }
