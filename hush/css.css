@@ -1,0 +1,405 @@
+body {
+    background-color: white;;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+
+
+/*///   Main Page   //////
+////////The Doors///////*/
+
+.door{
+    transition:transorm rotate(90deg);
+    width: 200px;
+    height: 400px;
+    transition: transform 1s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background-color: white;
+    color: white;
+    z-index: 1;
+}
+.door:hover{
+    color: #000000;
+}
+.door.opening {
+    transform: rotateY(-80deg);
+}
+.door .symbol {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.doorknob {
+    width: 20px;
+    height: 20px;
+    background-color: #f5f2f2;
+    border: 3px solid #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(-50%, -50%);
+}
+.door.left {
+    transform-origin: right;
+}
+.door.right {
+    transform-origin: right;
+}
+.text {
+    height: 20px;
+    width: 100px;
+    font-size:medium;
+    text-align: center;
+    margin-bottom: 200px;
+    margin-top: 10px;
+}
+.border{
+    position: absolute;
+    margin-top: 220mm;
+    width: 200px;
+    height: 400px;
+    outline: 5px solid #000000;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    z-index: 0;
+}
+.border.right{
+    margin-left: 40%;  
+}
+.border.left{
+    margin-right: 40%;  
+}
+
+
+
+/*////   scene objects  /////*/
+
+.image{
+    position: absolute;
+    width: 200px;
+    margin-top: 320mm;
+    margin-right: 130mm;
+    z-index: 1;
+}
+.light{
+    position:fixed;
+    width: 85px;
+    height: 45px;
+    margin-top: 50mm;
+    background-color: #5ac800;
+    border-bottom: 2.5px solid white;
+    border-top: 2.5px solid white;
+}
+.lighttext{
+    color: white;
+    font-size: 40px;
+    font-family: 'Arial Narrow',sans-serif;
+    text-align: center;
+    cursor: none;
+}
+.light:hover{
+    background-color: rgb(210, 40, 40);
+    cursor: none;
+}
+a{
+    text-decoration: none;
+}
+
+
+/*//////     PAGE 0    //////*/
+/*Men's and Women's Door Stuff*/
+
+.box{
+    height: 20px;
+    width: 20px;
+    padding: 20px;
+    margin-left: 1px;
+    cursor: pointer;
+    background-color: #d4005c;
+    border: 2px solid #861d03;
+    color: white;
+    text-align: center;
+
+}
+.box:hover{
+    background-color: #990143;
+    color: #ff5286;
+}
+.box1{
+    height: 20px;
+    width: 20px;
+    padding: 20px;
+    margin-left: 1px;
+    cursor:pointer;
+    background-color: #404040;
+    border: 2px solid #000000;
+    color: white;
+    text-align: center;
+}
+.box1:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+.popup1 {
+    display: none;
+    position: fixed;
+    width: 400px;
+    height: 100px;
+    background-color: #333;
+    color: white;
+    text-align: left;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 800px;
+}
+.popup {
+    display: none;
+    position: fixed;
+    width: 400px;
+    height: 100px;
+    background-color: #81003e;
+    color: white;
+    text-align: left;
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 800px;
+  }
+.Container{
+    position: absolute;
+    display: flex;
+    margin-top: 1000px;
+}
+
+
+
+/*//////    Page 1 V  ////////
+//////////The Matrix////////*/
+
+.Matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.Matrix pre {
+    margin: 0;
+    padding: 0;
+    animation: scroll 30s linear infinite; 
+}
+@keyframes scroll {
+    0% {
+        transform: translateY(15%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+pre{
+    color: rgb(0, 218, 0);
+    font-size: 12px;
+}
+.lft{
+    position: absolute;
+    right: 0px;
+    margin: 1%;
+    width: 100px;
+    background-color: rgba(0, 164, 0, 0.868);
+    text-align: center;
+    color: black;
+    cursor: none;
+}
+.lft:hover{
+    background-color: rgb(188, 0, 0);
+}
+.brb{
+    position: fixed;
+    margin-top: 55%;
+    background-color: #00000060;
+    color: #921616;
+    font-size: 5cm;
+}
+
+
+/*///////    Page 2 V  ////////
+//////////The Escape////////*/
+
+.textbox{
+    margin-top: 90mm;
+    height: 25px;
+    width: 340px;
+    font-size: 20px;
+    text-align: center;
+    resize: none;
+    border: none;
+    cursor: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.textbox:focus{
+    caret-color: transparent;
+    outline: none;
+}
+.apear{
+    display: none;
+    position: absolute;
+    margin-top: 50px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+}
+.square{
+    display: none;
+    position: absolute;
+    height:45px;
+    width: 45px;
+    background-color: red;
+    top: 0px;
+    left: 0px;
+}
+#appear ,#appear1{
+    animation: fadeIn 2.5s ease;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/*///////    Page 1 N  ////////
+////////////No Face//////////*/
+.Nall{
+    position: fixed;
+    margin-top: 200mm;
+}
+.Nall:hover{
+    cursor:grab;
+}
+.Nbody{
+    clip-path: polygon(15% 0, 85% 0, 100% 100%, 0 100%);
+	height: 400px;
+	width: 160px;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+    background-color: #000000;
+}
+.Nface{
+    height: 150px;
+    width: 100px;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: 30px;
+    margin-top: 10px;
+    position: absolute;
+}
+.NLeye{
+    height: 12px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: black;
+    margin-left: 13px;
+    margin-top: 47px;
+    position: absolute;
+}
+.NReye{
+    height: 12px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: black;
+    margin-left: 57px;
+    margin-top: 47px;
+    position: absolute;
+}
+.NLunder{
+    height: 3px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: #000000;
+    margin-left: 23px;
+    margin-top: 62px;
+    position: absolute;
+}
+.NRunder{
+    height: 3px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: #000000;
+    margin-left: 70px;
+    margin-top: 62px;
+    position: absolute;
+}
+.Nmouth{
+    height: 3px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #000000;
+    margin-left: 45px;
+    margin-top: 135px;
+    position: absolute;
+}
+.NLTbag{
+    clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%);
+    height: 30px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #ad6396;
+    margin-top: 14px;
+    margin-left: 20px;
+    transform: rotate(15deg);
+    position: absolute;
+}
+.NRTbag{
+    clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%);
+    height: 30px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #ad6396;
+    margin-top: 14px;
+    margin-left: 63px;
+    transform: rotate(-15deg);
+    position: absolute;
+}
+.NLDbag{
+    clip-path: polygon(100% 0, 100% 0, 50% 100%, 0 0%);
+    height: 55px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #ad6396;
+    margin-top: 70px;
+    margin-left: 18px;
+    position: absolute;
+}
+.NRDbag{
+    clip-path: polygon(100% 0, 100% 0, 50% 100%, 0 0%);
+    height: 55px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: #ad6396;
+    margin-top: 70px;
+    margin-left: 67px;
+    position: absolute;
+}
+.ttltxt{
+    font-size: 3cm;
+}
+/*///////  Just make more css files  //////////
+//////////// this must be the end ///////////*/

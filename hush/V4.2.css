@@ -1,0 +1,28 @@
+/*///////  Page 4.2 V  ////////
+///// PSP RECOVERY MENU /////*/
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: red;
+    cursor:default;
+}
+a,ul{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+}
+a:hover,li:hover{
+    color: red;
+    cursor:pointer;
+    list-style-type: "\003E\ ";
+}
+.BDots{
+    position: fixed;
+    bottom: 10%;
+}
+#status{
+    position: fixed;
+    bottom: 6%;
+    left: 1cm;
+    color: white;
+}

@@ -1,0 +1,36 @@
+/*///////    Page 4 V  ////////
+////////////// PSP   ////////*/
+ul{
+    list-style: none;
+    margin-top: 5cm;
+    text-align: center;
+}
+div{
+    display: inline-block;
+}
+.title{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: fit-content;
+    cursor: default;
+    color: white;
+    background-color: rgba(37, 210, 37, 0.64);
+}
+body{
+    background-image: url(PSP\ bg.jpg);
+    font-family: 'Courier New', Courier, monospace;
+}
+li{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: fit-content;
+    background-color: rgba(182, 3, 3, 0.427);
+}
+a,li{
+    text-decoration: none;
+    color: white;
+}
+a:hover,li:hover{
+    cursor: pointer;
+    background-color: rgb(138, 138, 255);    
+}
